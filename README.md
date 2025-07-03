@@ -30,7 +30,10 @@ The focus of this project is to practice authentication, CRUD operations, form h
   - A short synopsis
   - The author’s name and avatar (you can use their first name and last name initials)
   - A "Read More" link that navigates to the full blog post
-  - In displaying a blog, the markdown content should be displayed as HTML, you can use markdown to HTML tools on npm.
+
+Here is an example:
+![sample blog cards](./assets/sample-blog-cards.png)
+- In displaying a blog, the markdown content should be displayed as HTML, you can use markdown to HTML tools on npm.
 - Ensure a one-to-many relationship: One user can have many blogs
 
 ### User Profile Page
@@ -45,10 +48,11 @@ This page should include the following:
 
 ## More features
 ### Header
-- Logged out users only see the login and sign up buttons.
-- Logged in users can see:
+- [Required feature] Logged out users only see the login and sign up buttons.
+- [Required feature] Logged in users can see:
     - posts link (all blogs)
     - new blog link
     - profile link
     - A friendly message in the header e.g _welcome back john_
-- Optional feature: allow users to upload profile pictures.
+- [Required feature] a small landing page.
+- [Optional feature]: allow users to upload profile pictures.
