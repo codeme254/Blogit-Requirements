@@ -34,11 +34,14 @@ The focus of this project is to practice authentication, CRUD operations, form h
 Here is an example:
 ![sample blog cards](./assets/sample-blog-cards.png)
 - In displaying a blog, the markdown content should be displayed as HTML, you can use markdown to HTML tools on npm.
+- [Markdown to HTML tools](https://www.npmjs.com/search?q=react%20markdown%20to%20html)
+- If a blog has been deleted, don't display it, show a 'not found' message instead.
 - Ensure a one-to-many relationship: One user can have many blogs
 
 ### User Profile Page
 This page should include the following:
-- Show all blogs created by the user with options to update or delete
+- Show all blogs created by the user with options to update or delete.
+- If a user clicks on update, redirect them to a page that contains a form with the blog details pre-populated in the form.
 - Include a form pre-filled with their personal details (first name, last name, username, email), users can use this form to update their details - implement functionality for users to update their primary information (first name, last name, username, email).
 - A separate form to update password.
     - The form should contain input fields for current and new password.
@@ -55,4 +58,21 @@ This page should include the following:
     - profile link
     - A friendly message in the header e.g _welcome back john_
 - [Required feature] a small landing page.
+- [Required feature] Protected routes/pages, some pages should only be accessible to logged in users.
 - [Optional feature]: allow users to upload profile pictures.
+
+## API Endpoints
+- `POST /api/auth/register`: register a user
+- `POST /api/auth/login`: login a user
+- `POST /api/auth/logout`: logout a user
+
+- `GET /api/blogs`: get all blogs
+- `POST /api/blogs`: create a blog.
+- `GET /api/blogs/:blogId`: get a specific blog.
+- `PATCH /api/blogs/:blogId`: update a blog.
+- `DELETE /api/blogs/:blogId`: delete a blog
+- `PATCH /api/user`: update user's primary information.
+- `PATCH /api/user/password`: update user's password.
+- `GET /api/user/blogs`: get all blogs belonging to a specific user.
+
+NOTE: Don't show deleted blogs on a user's profile, only show the blogs that have not been deleted.
